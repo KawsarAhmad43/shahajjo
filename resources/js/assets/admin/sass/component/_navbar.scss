@@ -1,0 +1,126 @@
+@import "../variable/bgcolor";
+@import "../variable/textcolor";
+
+.top-navbar {
+  width: 100%;
+  background-color: $lightColor;
+  padding: 0 29px;
+
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 28px;
+      position: relative;
+
+      a {
+        font-size: 15px;
+        font-weight: 400;
+        color: $lightDarkColor;
+        line-height: 42px;
+        transition: all linear .2s;
+
+        i {
+          padding-right: 4px;
+          font-size: 15px;
+        }
+
+        &:hover {
+          color: $themeColorFour;
+        }
+
+        span {
+          padding-left: 8px;
+
+          i {
+            font-size: 12px;
+          }
+        }
+      }
+
+      ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $lightColor;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        width: 180px;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding: 10px 0;
+        visibility: hidden;
+        opacity: 0;
+
+        li {
+          display: block;
+          margin-right: 0;
+
+          a {
+            display: block;
+            width: 100%;
+            line-height: 34px;
+            padding: 0 24px;
+            padding-right: 14px;
+          }
+
+          ul {
+            position: absolute;
+            left: 100%;
+            top: 0;
+          }
+        }
+      }
+
+      &:hover>ul {
+        transition: all linear .2s;
+        visibility: visible;
+        opacity: 1;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.top-menu {
+  .navigation-body {
+    display: none;
+  }
+
+  .main-content-body {
+    margin-left: 0;
+  }
+
+  .top-header {
+    z-index: 999;
+
+    .control-bar {
+      display: none !important;
+    }
+
+    .expand {
+      display: none;
+    }
+  }
+
+  .fixed {
+    padding-left: 0;
+  }
+}
+
+.side-menu {
+  .top-header {
+
+    .left-info {
+      .logo {
+        display: none;
+      }
+    }
+
+    .topbar {
+      padding-left: 0;
+    }
+  }
+
+  .top-navbar {
+    display: none;
+  }
+}

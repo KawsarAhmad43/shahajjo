@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @Nogor Solutions Ltd
+ */
+
+namespace {{ namespace }};
+
+use App\Models\Base\BaseModel;
+
+class {{ class }} extends BaseModel
+{
+    protected $guarded = ['id'];
+    
+    protected $logName = "{{ class }}";
+
+    // file image push
+
+    // date format
+}

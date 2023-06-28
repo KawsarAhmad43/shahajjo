@@ -1,0 +1,140 @@
+
+.form-element input {
+    height: 37px;
+}
+
+.search-btn {
+    height: 37px;
+    padding: 0 18px;
+    width: 52px;
+    line-height: 41px;
+    font-size: 17px;
+}
+
+.inner-content {
+    padding: 20px;
+}
+
+.form-element select {
+    height: 37px;
+}
+
+.table-list-body {
+    overflow-y: auto;
+}
+
+.login-page{
+    position: relative;
+}
+
+.click-developed{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 260px;
+    padding: 16px 30px;
+    background-color: #fff;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease 0s;
+}
+
+.show-hide-click-developed{
+    left: -260px;
+}
+
+.show-hide-click-developed .click-developed-arrow i{
+    transform: rotate(180deg);
+}
+
+.click-developed span{
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.click-developed .click-developed-arrow{
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(to bottom, #61daff, #656bff);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.form-element label .floating-tooltip {
+    width: 170px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    left: -8px;
+    top: -38px;
+    font-size: 13px;
+    z-index: 99;
+}
+
+.floating-tooltip {
+    width: 170px;
+        padding: 4px 8px;
+        border-radius: 5px;
+        display: inline-block;
+        left: -8px;
+        top: -38px;
+        font-size: 13px;
+        z-index: 99;
+}
+
+ .floating-tooltip::before {
+width: 10px;
+    height: 10px;
+    background-color: #DC3545;
+    position: absolute;
+    left: 12px;
+    transform: translateX(-50%);
+    bottom: -10px;
+    transform: translateY(-50%) rotate(45deg);
+    content: "";
+}
+
+.form-element label .floating-tooltip::before {
+    width: 10px;
+    height: 10px;
+    background-color: #DC3545;
+    position: absolute;
+    left: 12px;
+    transform: translateX(-50%);
+    bottom: -10px;
+    transform: translateY(-50%) rotate(45deg);
+    content: "";
+}
+
+.vs--searchable .vs__dropdown-toggle {
+    height: 37px !important;
+}
+
+.vs__search,
+.vs__search:focus {
+    margin: 6px 0 0 !important;
+}
+
+span .fa-circle-question{
+    cursor: pointer;
+}
+
+.navigation-body .branding {
+    color: #222;
+    background-color: #fff;
+}
+
+.navigation-body .logo {
+    background: #fff;
+}
+.navigation-body .branding h6 {
+    color: #222;
+}

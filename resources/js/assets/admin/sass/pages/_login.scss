@@ -1,0 +1,100 @@
+@import "../variable/bgcolor";
+@import "../variable/textcolor";
+
+.login-page .login-body {
+    width: 100%;
+    height: 100vh;
+}
+
+.login-page .login-body .login-main {
+    width: 100%;
+    padding: 75px 70px 75px 0;
+    background-color: #fff;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+}
+
+.login-page .login-body .login-main .company-info {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #61daff, #656bff);
+    position: relative;
+    left: -45px;
+    border-radius: 15px;
+    padding: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 317px;
+}
+
+.login-page .login-body .login-main .company-info .logo {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120px;
+    margin: 0 auto;
+}
+
+.login-page .login-body .login-main .company-info .logo img {
+    padding: 10px;
+}
+
+.login-page .login-body .login-main .company-info h2 {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Rubik', sans-serif;
+    padding-top: 24px;
+}
+
+.login-page .login-body .login-main .login-title h3 {
+    color: #656bff;
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.login-page .login-body .login-main .login-title h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #404E67;
+    font-family: 'Rubik', sans-serif;
+    padding-bottom: 40px;
+}
+
+.login-page .login-body .login-main .input-groups input {
+    width: 100%;
+    height: 50px;
+    background-color: #EBEBEB;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #404E67;
+    padding: 0 22px;
+}
+
+.login-page .login-body .login-main .input-groups input::placeholder {
+    color: #404E67;
+}
+
+.login-page .login-body .login-main .form-label {
+    font-size: 17px;
+}
+
+.login-page .login-body .login-main .button button {
+    background-image: linear-gradient(to bottom, #61daff, #656bff);
+    border: 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+    line-height: 55px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.login-page .login-body .login-main .button button:hover {
+    background-image: linear-gradient(to bottom, #56cdf1, #5c61ef);
+}

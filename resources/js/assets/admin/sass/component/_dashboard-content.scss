@@ -1,0 +1,283 @@
+.main-content-body {
+  height: 100vh;
+  margin-left: 250px;
+  background-color: $dashboardBgColor;
+
+  .content-part {
+    .summery-item {
+      h4 {
+        font-size: 14px;
+        color: $lightColor;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+
+    .details-info {
+      .projects {
+        thead {
+          position: sticky;
+          top: 0;
+          bottom: 0;
+          background-color: #f5f5f5;
+        }
+      }
+    }
+  }
+}
+
+.content-part {
+  padding: 29px;
+
+  .summery-item {
+    width: 100%;
+    background-image: linear-gradient(90deg, #5f82d3, #1e499f) !important;
+    border-radius: 7px;
+    padding: 35px 24px;
+    position: relative;
+    box-shadow: 0 1px 20px 0 #455a6414;
+
+    h3 {
+      font-size: 26px;
+      color: $lightColor;
+      font-weight: 600;
+      padding: 10px 0 10px 0;
+    }
+
+    ul {
+      li {
+        span {
+          font-size: px;
+          font-weight: 600;
+          color: $themeColorOne;
+          padding-right: 5px;
+        }
+
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .circle {
+      position: absolute;
+      top: 30px;
+      right: 24px;
+
+      i {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #ffffff33;
+        color: $lightColor;
+        font-size: 24px;
+        text-align: center;
+        line-height: 60px;
+      }
+    }
+  }
+
+  .summery-item.item-2 {
+    background-image: linear-gradient(-20deg, #2b5876, #4e4376) !important;
+  }
+
+  .summery-item.item-3 {
+    background-image: linear-gradient(135deg, #667eea, #764ba2) !important;
+  }
+
+  .summery-item.item-4 {
+    background-image: linear-gradient(135deg, #43cea2, #185a9d) !important;
+  }
+
+  .details-info {
+    margin-top: 24px;
+
+    .info-notification {
+      width: 100%;
+      background-color: $lightColor;
+      border-radius: 7px;
+      box-shadow: 0 1px 20px 0 #455a6414;
+      padding: 24px;
+
+      .title {
+        padding-bottom: 12px;
+      }
+
+      h4 {
+        font-size: 17px;
+        color: $dashDarkTextColor;
+      }
+    }
+
+    .info-notify-item {
+      background-color: #FFEEEE;
+      padding: 18px 14px;
+      margin-bottom: 16px;
+
+      .icon {
+        padding-right: 20px;
+
+        i {
+          color: #01B3B7;
+        }
+      }
+
+      .text {
+        width: 100%;
+
+        a {
+          color: #404E67;
+          transition: all linear .2s;
+
+          &:hover {
+            color: #0ACF97;
+          }
+        }
+
+        span {
+          color: $dashGrayTextColor;
+          font-size: 14px;
+          font-weight: 400;
+          padding-top: 5px;
+          display: inline-block;
+        }
+      }
+
+      .percent {
+        h5 {
+          font-size: 14px;
+          color: #FF5B5B;
+        }
+      }
+    }
+
+    .info-notify-item.info-item2 {
+      background-color: #F8F5FF;
+    }
+
+    .info-notify-item.info-item3 {
+      background-color: #E8FFF3;
+    }
+
+    .info-notify-item.info-item4 {
+      background-color: #FFF8DD;
+    }
+
+    .projects {
+      width: 100%;
+      background-color: $lightColor;
+      border-radius: 7px;
+      box-shadow: 0 1px 20px 0 #455a6414;
+      padding: 24px;
+
+      .title {
+        padding-bottom: 12px;
+      }
+
+      h4 {
+        font-size: 17px;
+        color: $dashDarkTextColor;
+      }
+
+      th {
+        font-size: 15px;
+        font-weight: 500;
+        color: #404e67e6;
+      }
+
+      tr {
+        vertical-align: middle;
+      }
+
+      td {
+        color: $dashGrayTextColor;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      .released {
+        background-color: #FF5B5B;
+        border: 0;
+        color: $lightColor;
+        border-radius: 5px;
+        padding: 2px 5px;
+        font-size: 12px;
+      }
+
+      .released.pending {
+        background-color: #00BCD4;
+      }
+
+      .released.in-progress {
+        background-color: #5B69BC;
+      }
+
+      .released.comming {
+        background-color: #188AE2;
+      }
+
+      .released.finish {
+        background-color: #F9BC0B;
+      }
+
+      .delete {
+        width: 25px;
+        height: 25px;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 25px;
+        display: inline-block;
+        cursor: pointer;
+        transition: all linear .2s;
+        font-size: 12px;
+        margin: 0 1px;
+        background-color: #f5f8fa;
+      }
+
+      .delete-btn {
+        border: 1px solid $themeColorThree;
+        color: $themeColorThree;
+
+        &:hover {
+          background-color: $themeColorThree;
+          color: $lightColor
+        }
+      }
+
+      .view {
+        border: 1px solid $themeColorFive;
+        color: $themeColorFive;
+
+        &:hover {
+          background-color: $themeColorFive;
+          color: $lightColor;
+        }
+      }
+
+      .edit {
+        border: 1px solid $themeColorSix;
+        color: $themeColorSix;
+
+        &:hover {
+          background-color: $themeColorSix;
+          color: $lightColor;
+        }
+      }
+    }
+
+    .project-table {
+      overflow-y: scroll;
+      height: 361px;
+      scrollbar-width: thin;
+      scrollbar-color: #01B3B7 transparent;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #01B3B7;
+      }
+    }
+  }
+}

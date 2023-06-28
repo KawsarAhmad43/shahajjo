@@ -1,0 +1,136 @@
+<?php
+
+/**
+ * @Nogor Solutions Ltd
+ */
+
+namespace {{ namespace }}\Admin;
+
+use Exception;
+use {{ namespacedModel }};
+use Illuminate\Http\Request;
+use App\Http\Resources\Resource;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Base\BaseController;
+use Storage;
+
+class {{ class }} extends BaseController
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
+    {   
+        $query  = {{ model }}::latest();
+        $query->whereLike( $request->field_name, $request->value );
+
+        $datas  = $query->paginate($request->pagination);
+        return new Resource($datas);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('layouts.backend_app');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        if ($this->validateCheck($request)) {
+            try {
+                $data = $request->all();
+                // push the insert text
+                $res = {{ model }}::create($data); 
+                return $this->responseReturn( "create", $res );
+            } catch (Exception $ex) {
+                return response()->json( ['exception' => $ex->errorInfo ?? $ex->getMessage()], 422 );
+            }
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Request $request, {{ model }} ${{ modelVariable }})
+    {
+        if ($request->format() == 'html') {
+            return view('layouts.backend_app');
+        }
+        return ${{ modelVariable }};
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return \Illuminate\Http\Response
+     */
+    public function edit({{ model }} ${{ modelVariable }})
+    {
+        return view('layouts.backend_app');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, {{ model }} ${{ modelVariable }})
+    {
+        if ($this->validateCheck($request, ${{ modelVariable }}->id)) {
+            try {
+                $data = $request->all();
+                // push the update text
+                ${{ modelVariable }}->fill( $data )->save();
+
+                return $this->responseReturn( "update", ${{ modelVariable }} );
+            } catch (Exception $ex) {
+                return response()->json( ['exception' => $ex->errorInfo ?? $ex->getMessage()], 422 );
+            }
+        }
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy({{ model }} ${{ modelVariable }})
+    {
+        $res = ${{ modelVariable }}->delete();
+        return $this->responseReturn( "delete", $res );
+    }
+
+    /**
+     * Validate form field.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function validateCheck($request, $id=null)
+    {
+        return true;
+        return $request->validate([
+            //ex: 'name' => 'required|email|nullable|date|string|min:0|max:191',
+        ],[
+            //ex: 'name' => "This name is required" (custom message)
+        ]);
+    }
+}

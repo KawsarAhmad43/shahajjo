@@ -1,0 +1,403 @@
+@import "../variable/bgcolor";
+@import "../variable/textcolor";
+
+.form-element {
+  margin-bottom: 14px;
+
+  select {
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    border: 1px solid $lightDarkColor;
+    padding: 0 16px;
+    padding-right: 40px;
+
+    &:focus {
+      border-color: $themeColorFour;
+    }
+  }
+}
+
+.search-btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  height: 40px;
+  padding: 0 22px;
+  width: 70px;
+  line-height: 40px;
+  overflow: hidden;
+  background: $themeColorSix;
+  transition: all 0.5s ease;
+  border: none;
+  color: $lightColor  !important;
+  border-radius: 5px;
+  font-size: 20px;
+
+  &:hover {
+    color: white;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  .btn-front {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+    transition: all 0.8s ease;
+
+    &:hover {
+      transform: scale(0);
+    }
+  }
+
+  .btn-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: scale(4);
+    transition: all 0.8s ease;
+    opacity: 0;
+
+    &:hover {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.add-btn {
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  height: 40px;
+  padding: 0 15px;
+  width: 160px;
+  line-height: 40px;
+  overflow: hidden;
+  background: $darkColor;
+  transition: all 0.5s ease;
+  border: none;
+  color: $lightColor  !important;
+
+  i {
+    font-size: 18px;
+    padding-right: 5px;
+  }
+
+  &:hover {
+    background: $themeColorThree  !important;
+    color: white;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  .btn-front {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+    transition: all 0.8s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 160px;
+    padding: 0 15px;
+
+
+
+    &:hover {
+      transform: scale(0);
+      color: $lightColor;
+      background: $themeColorThree;
+    }
+  }
+
+  .btn-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: scale(4);
+    transition: all 0.8s ease;
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 160px;
+    padding: 0 15px;
+
+    &:hover {
+      transform: scale(1);
+      opacity: 1;
+      color: $lightColor;
+      background: $themeColorThree;
+    }
+  }
+}
+
+
+.print-option {
+  ul {
+    li {
+      display: inline-block;
+      margin-left: 4px;
+
+      a {
+        color: $lightColor;
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        background-color: $themeColorFive;
+        text-align: center;
+        line-height: 30px;
+        padding: 0;
+      }
+
+      button {
+        color: $lightColor;
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        background-color: $themeColorFive;
+        text-align: center;
+        line-height: 30px;
+        padding: 0;
+        border: none;
+      }
+
+      .pdf {
+        background-color: $themeColorThree;
+      }
+
+      .excel {
+        background-color: $themeColorSix;
+      }
+    }
+  }
+}
+
+.table-list {
+  thead {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    background-color: #f5f5f5;
+  }
+
+  .title {
+    padding-bottom: 12px;
+  }
+
+  tbody {
+    td {
+      padding: .3rem .5rem;
+    }
+  }
+
+  h4 {
+    font-size: 17px;
+    color: $dashDarkTextColor;
+  }
+
+  th {
+    font-size: 15px;
+    font-weight: 500;
+    color: #404e67e6;
+
+    .table-title {
+      position: relative;
+      display: inline-block;
+    }
+
+    i {
+      position: absolute;
+      right: -30px;
+      cursor: pointer;
+      font-size: 11px;
+    }
+
+    .sort-up {
+      top: 6px;
+    }
+
+    .sort-down {
+      bottom: 6px;
+    }
+  }
+
+  tr {
+    vertical-align: middle;
+  }
+
+  td {
+    color: $dashGrayTextColor;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .released {
+    background-color: #FF5B5B;
+    border: 0;
+    color: $lightColor;
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+
+  .released.pending {
+    background-color: #00BCD4;
+  }
+
+  .released.in-progress {
+    background-color: #5B69BC;
+  }
+
+  .released.comming {
+    background-color: #188AE2;
+  }
+
+  .released.finish {
+    background-color: #F9BC0B;
+  }
+}
+
+.table-list-body {
+  height: 573px;
+  scrollbar-width: thin;
+  scrollbar-color: #01B3B7 transparent;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #01B3B7;
+  }
+}
+
+
+
+.list-footer {
+  padding: 40px 0;
+  border-top: 1px solid #f2f2f2;
+  margin-top: 40px;
+
+  p {
+    color: $darkColor;
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+
+.pagination ul li {
+  display: inline-block;
+  box-shadow: 0 0px 25px rgba(0, 0, 0, 0.1);
+}
+
+.pagination ul li a {
+  color: $topbarBgColor;
+}
+
+.pagination ul li.arrow {
+  width: 40px;
+  height: 40px;
+  background-color: $lightColor;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 6px;
+}
+
+.pagination ul li.arrow:last-child {
+  margin-right: 0;
+}
+
+.pagination ul li.mid-pagi {
+  padding: 0 20px;
+  background-color: $lightColor;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+}
+
+.pagination ul li.mid-pagi a {
+  margin: 0 10px;
+  color: $topbarBgColor;
+}
+
+.pagination ul li.mid-pagi a.active {
+  width: 25px;
+  height: 25px;
+  background-color: $topbarBgColor;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  display: inline-block;
+  color: $lightColor;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.delete {
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 25px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all linear .2s;
+  font-size: 12px;
+  margin: 0 2px;
+  background-color: #f5f8fa;
+}
+
+.delete-btn {
+  border: 1px solid $themeColorThree;
+  color: $themeColorThree;
+
+  &:hover {
+    background-color: $themeColorThree;
+    color: $lightColor
+  }
+}
+
+.view {
+  border: 1px solid $themeColorFive;
+  color: $themeColorFive;
+
+  &:hover {
+    background-color: $themeColorFive;
+    color: $lightColor;
+  }
+}
+
+.edit {
+  border: 1px solid $themeColorSix;
+  color: $themeColorSix;
+
+  &:hover {
+    background-color: $themeColorSix;
+    color: $lightColor;
+  }
+}

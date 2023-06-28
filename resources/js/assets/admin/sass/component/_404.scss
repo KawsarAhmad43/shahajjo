@@ -1,0 +1,46 @@
+$color_1: #fff;
+$font-family_1: 'Roboto', sans-serif;
+
+/* 404 page part start */
+/* 404 page part end */
+.page_404 {
+    padding: 80px 0;
+    background: #fff;
+
+    img {
+        width: 100%;
+    }
+}
+
+.four_zero_four_bg {
+    background-image: url(../images/404-page-image.gif);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    h1 {
+        font-size: 120px;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 80px;
+    }
+}
+
+.link_404 {
+    color: $color_1  !important;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    font-family: $font-family_1;
+}
+
+.contant_box_404 {
+    margin-top: -50px;
+
+    h3 {
+        font-weight: 600;
+        font-size: 34px;
+    }
+}

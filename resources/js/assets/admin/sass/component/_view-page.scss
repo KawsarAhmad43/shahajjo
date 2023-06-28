@@ -1,0 +1,35 @@
+@import "../variable/bgcolor";
+@import "../variable/textcolor";
+
+.view-page {
+  .left-info {
+    background-color: $lightColor;
+    box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px 20px;
+  }
+
+  .image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .file {
+    // margin-top: 30px;
+    text-align: center;
+
+    a {
+      color: $themeColorFour;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}

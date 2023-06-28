@@ -1,0 +1,47 @@
+@import "../variable/textcolor";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul,
+ol {
+
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  font-family: 'Rubik', sans-serif;
+}
+
+i {
+  display: inline-block;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 15px;
+  background-color: #F6F7FB;
+  color: $lightDarkColor;
+  font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,51 @@
+@import "../variable/bgcolor";
+@import "../variable/textcolor";
+
+.gallery-list {
+  .image {
+    position: relative;
+    height: 260px;
+    margin-bottom: 24px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      height: 100%;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0);
+      transition-duration: .2s;
+      padding: 40px;
+    }
+
+    &:hover {
+      .overlay {
+        transform: scale(1);
+      }
+    }
+  }
+
+  h4 {
+    margin-top: 16px;
+    font-size: 18px;
+    color: $lightColor;
+  }
+  .manage-gallery{
+    background-color: $themeColorFive;
+    border: none;
+  }
+}
